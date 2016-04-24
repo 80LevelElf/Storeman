@@ -1,4 +1,4 @@
-package Entities.Interfaces;
+package Model.Interfaces;
 
 /**
  * Created by Rustam Salakhutdinov on 02.04.2016.

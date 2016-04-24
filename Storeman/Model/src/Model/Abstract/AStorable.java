@@ -1,11 +1,11 @@
-package Entities.Abstract;
+package Model.Abstract;
 
-import Entities.Interfaces.IStorable;
+import Model.Interfaces.IStorable;
 
 /**
  * Created by Rustam Salakhutdinov on 02.04.2016.
  */
-public abstract class AStorable implements IStorable{
+public abstract class AStorable implements IStorable {
     private Long id;
 
     /**

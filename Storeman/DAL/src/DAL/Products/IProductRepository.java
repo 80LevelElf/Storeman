@@ -1,8 +1,8 @@
-package Interfaces.Products;
+package DAL.Products;
 
-import Entities.Product;
-import Interfaces.IReadRepository;
-import Interfaces.IWriteRepository;
+import Model.Entities.Product;
+import DAL.Interfaces.IReadRepository;
+import DAL.Interfaces.IWriteRepository;
 
 /**
  * Created by Rustam Salakhutdinov on 17.04.2016.

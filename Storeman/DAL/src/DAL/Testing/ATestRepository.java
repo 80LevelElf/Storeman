@@ -1,8 +1,8 @@
-package Testing;
+package DAL.Testing;
 
-import Entities.Interfaces.IStorable;
-import Interfaces.IReadRepository;
-import Interfaces.IWriteRepository;
+import Model.Interfaces.IStorable;
+import DAL.Interfaces.IReadRepository;
+import DAL.Interfaces.IWriteRepository;
 
 import java.util.ArrayList;
 

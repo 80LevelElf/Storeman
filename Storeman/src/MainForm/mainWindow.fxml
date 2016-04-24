@@ -11,10 +11,33 @@
   <children>
     <MenuBar fx:id="mainMenu" mouseTransparent="false" pickOnBounds="true" prefWidth="814.0" useSystemMenuBar="false" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
       <menus>
-        <Menu mnemonicParsing="false" text="Unspecified Menu">
+        <Menu mnemonicParsing="false" text="Store">
           <items>
-            <MenuItem mnemonicParsing="false" text="Action 1" />
-            <MenuItem mnemonicParsing="false" text="Unspecified Action" />
+            <MenuItem mnemonicParsing="false" text="Current products" />
+            <MenuItem mnemonicParsing="false" text="Transactions" />
+            <SeparatorMenuItem mnemonicParsing="false" />
+            <MenuItem mnemonicParsing="false" text="Product types" />
+          </items>
+        </Menu>
+        <Menu mnemonicParsing="false" text="History">
+          <items>
+            <MenuItem mnemonicParsing="false" text="Transaction history" />
+          </items>
+        </Menu>
+        <Menu mnemonicParsing="false" text="System">
+          <items>
+            <MenuItem mnemonicParsing="false" text="Settings" />
+            <Menu mnemonicParsing="false" text="Style">
+              <items>
+                <RadioMenuItem mnemonicParsing="false" text="Default" />
+                <RadioMenuItem mnemonicParsing="false" text="Metro" />
+              </items>
+            </Menu>
+          </items>
+        </Menu>
+        <Menu mnemonicParsing="false" text="Help">
+          <items>
+            <MenuItem mnemonicParsing="false" text="About Storeman" />
           </items>
         </Menu>
       </menus>

@@ -1,8 +1,8 @@
-package Testing.Products;
+package DAL.Testing.Products;
 
-import Entities.Product;
-import Entities.ProductType;
-import Testing.ATestRepository;
+import Model.Entities.Product;
+import Model.Entities.ProductType;
+import DAL.Testing.ATestRepository;
 
 import java.util.ArrayList;
 
@@ -14,9 +14,11 @@ public class TestProductRepository extends ATestRepository<Product> {
     public TestProductRepository() {
         ProductType carProductType = new ProductType() {{
             setName("Cars");
+            setMeasureUnits("PCs.");
         }};
         ProductType penProductType = new ProductType() {{
             setName("Pens");
+            setMeasureUnits("PCs.");
         }};
 
         _dataList = new ArrayList<Product>() {{

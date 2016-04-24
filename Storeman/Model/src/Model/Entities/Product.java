@@ -1,8 +1,6 @@
-package Entities;
+package Model.Entities;
 
-import Entities.Abstract.AStorable;
-
-import java.util.Currency;
+import Model.Abstract.AStorable;
 
 /**
  * Created by Rustam Salakhutdinov on 02.04.2016.

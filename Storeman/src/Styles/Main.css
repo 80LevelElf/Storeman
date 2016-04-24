@@ -1,0 +1,12 @@
+#currentProductTitledPanel .title{
+    -fx-background-color: lightblue;
+}
+
+.titled-pane .title{
+    -fx-font-weight: bold;
+    -fx-alignment: center;
+}
+
+column-header-background{
+    -fx-background-color: red;
+}

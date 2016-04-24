@@ -13,17 +13,17 @@ import java.io.IOException;
 public final class FormManager {
     //Panels
     public final static void setCurrentProductsPanel(AnchorPane parent) throws IOException {
-        fillParentAnchorPaneBy(parent, importNode("/Components/CurrentProductsPanel/currentProductsPanel.fxml"));
+        prepareForm(parent, importForm("/Components/CurrentProductsPanel/currentProductsPanel.fxml"));
     }
 
-    private final static Node importNode(String fxmlFilePath) throws IOException {
+    private final static Node importForm(String fxmlFilePath) throws IOException {
         FXMLLoader loader = new FXMLLoader();
         loader.setLocation(Main.class.getResource(fxmlFilePath));
         System.out.println(loader.getLocation());
         return  (Node) loader.load();
     }
 
-    private final static void fillParentAnchorPaneBy(AnchorPane parent, Node node)
+    private final static void prepareForm(AnchorPane parent, Node node)
     {
         parent.getChildren().removeAll();
         parent.getChildren().add(node);

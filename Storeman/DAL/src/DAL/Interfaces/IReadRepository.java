@@ -1,6 +1,6 @@
-package Interfaces;
+package DAL.Interfaces;
 
-import Entities.Interfaces.IStorable;
+import Model.Interfaces.IStorable;
 
 import java.util.ArrayList;
 
