@@ -16,7 +16,7 @@
             <MenuItem mnemonicParsing="false" text="Current products" />
             <MenuItem mnemonicParsing="false" text="Transactions" />
             <SeparatorMenuItem mnemonicParsing="false" />
-            <MenuItem mnemonicParsing="false" text="Product types" />
+            <MenuItem mnemonicParsing="false" text="Product types" fx:id="productTypeMenuItem" />
           </items>
         </Menu>
         <Menu mnemonicParsing="false" text="History">

@@ -5,10 +5,15 @@ import java.net.URL;
 import java.util.ResourceBundle;
 
 import Managers.FormManager;
+import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.scene.Node;
 import javafx.scene.control.MenuBar;
+import javafx.scene.control.MenuItem;
 import javafx.scene.layout.AnchorPane;
+
+import javax.swing.event.HyperlinkEvent;
 
 public class MainWindowController {
 
@@ -25,10 +30,24 @@ public class MainWindowController {
     private AnchorPane mainPane;
 
     @FXML
+    private MenuItem productTypeMenuItem;
+
+    @FXML
     void initialize() throws IOException {
         assert mainMenu != null : "fx:id=\"mainMenu\" was not injected: check your FXML file 'mainWindow.fxml'.";
         assert mainPane != null : "fx:id=\"mainPane\" was not injected: check your FXML file 'mainWindow.fxml'.";
 
         FormManager.setCurrentProductsPanel(mainPane);
+
+        productTypeMenuItem.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent event) {
+                try {
+                    FormManager.showProductTypeEdit(mainPane.getScene().getWindow());
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
+        });
     }
 }
