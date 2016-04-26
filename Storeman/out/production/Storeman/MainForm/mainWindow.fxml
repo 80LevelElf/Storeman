@@ -13,20 +13,19 @@
       <menus>
         <Menu mnemonicParsing="false" text="Store">
           <items>
-            <MenuItem mnemonicParsing="false" text="Current products" />
-            <MenuItem mnemonicParsing="false" text="Transactions" />
+            <MenuItem mnemonicParsing="false" text="Current products" fx:id="currentProductMenuItem" />
             <SeparatorMenuItem mnemonicParsing="false" />
             <MenuItem mnemonicParsing="false" text="Product types" fx:id="productTypeMenuItem" />
           </items>
         </Menu>
         <Menu mnemonicParsing="false" text="History">
           <items>
-            <MenuItem mnemonicParsing="false" text="Transaction history" />
+            <MenuItem mnemonicParsing="false" text="Transaction history" fx:id="transactionHistoryMenuItem" />
           </items>
         </Menu>
         <Menu mnemonicParsing="false" text="System">
           <items>
-            <MenuItem mnemonicParsing="false" text="Settings" />
+            <MenuItem mnemonicParsing="false" text="Settings" fx:id="settingsMenuItem" />
             <Menu mnemonicParsing="false" text="Style">
               <items>
                 <RadioMenuItem mnemonicParsing="false" text="Default" />
@@ -37,7 +36,7 @@
         </Menu>
         <Menu mnemonicParsing="false" text="Help">
           <items>
-            <MenuItem mnemonicParsing="false" text="About Storeman" />
+            <MenuItem mnemonicParsing="false" text="About Storeman" fx:id="aboutMenuItem" />
           </items>
         </Menu>
       </menus>

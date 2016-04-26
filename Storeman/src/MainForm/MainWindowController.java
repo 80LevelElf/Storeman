@@ -24,6 +24,12 @@ public class MainWindowController {
     private URL location;
 
     @FXML
+    private MenuItem aboutMenuItem;
+
+    @FXML
+    private MenuItem currentProductMenuItem;
+
+    @FXML
     private MenuBar mainMenu;
 
     @FXML
@@ -33,21 +39,23 @@ public class MainWindowController {
     private MenuItem productTypeMenuItem;
 
     @FXML
+    private MenuItem settingsMenuItem;
+
+    @FXML
+    private MenuItem transactionHistoryMenuItem;
+
+    @FXML
     void initialize() throws IOException {
+        assert aboutMenuItem != null : "fx:id=\"aboutMenuItem\" was not injected: check your FXML file 'mainWindow.fxml'.";
+        assert currentProductMenuItem != null : "fx:id=\"currentProductMenuItem\" was not injected: check your FXML file 'mainWindow.fxml'.";
         assert mainMenu != null : "fx:id=\"mainMenu\" was not injected: check your FXML file 'mainWindow.fxml'.";
         assert mainPane != null : "fx:id=\"mainPane\" was not injected: check your FXML file 'mainWindow.fxml'.";
+        assert productTypeMenuItem != null : "fx:id=\"productTypeMenuItem\" was not injected: check your FXML file 'mainWindow.fxml'.";
+        assert settingsMenuItem != null : "fx:id=\"settingsMenuItem\" was not injected: check your FXML file 'mainWindow.fxml'.";
+        assert transactionHistoryMenuItem != null : "fx:id=\"transactionHistoryMenuItem\" was not injected: check your FXML file 'mainWindow.fxml'.";
 
-        FormManager.setCurrentProductsPanel(mainPane);
+        FormManager.setStartPanel(mainPane);
 
-        productTypeMenuItem.setOnAction(new EventHandler<ActionEvent>() {
-            @Override
-            public void handle(ActionEvent event) {
-                try {
-                    FormManager.showProductTypeEdit(mainPane.getScene().getWindow());
-                } catch (IOException e) {
-                    e.printStackTrace();
-                }
-            }
-        });
+        currentProductMenuItem.setOnAction(event -> FormManager.setCurrentProductsPanel(mainPane));
     }
 }

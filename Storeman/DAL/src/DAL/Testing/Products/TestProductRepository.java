@@ -1,7 +1,6 @@
 package DAL.Testing.Products;
 
 import Model.Entities.Product;
-import Model.Entities.ProductType;
 import DAL.Testing.ATestRepository;
 
 import java.util.ArrayList;
@@ -12,44 +11,34 @@ import java.util.ArrayList;
 public class TestProductRepository extends ATestRepository<Product> {
 
     public TestProductRepository() {
-        ProductType carProductType = new ProductType() {{
-            setName("Cars");
-            setMeasureUnits("PCs.");
-        }};
-        ProductType penProductType = new ProductType() {{
-            setName("Pens");
-            setMeasureUnits("PCs.");
-        }};
+        TestProductTypeRepository productTypeRepository = new TestProductTypeRepository();
 
         _dataList = new ArrayList<Product>() {{
-
-            //Car product group
             add(new Product(1) {{
                 setCount(3);
                 setPrice(120);
-                setProductType(carProductType);
+                setProductType(productTypeRepository.getRandom());
                 setName("Car 1");
             }});
 
             add(new Product(2) {{
                 setCount(5);
                 setPrice(1205);
-                setProductType(carProductType);
+                setProductType(productTypeRepository.getRandom());
                 setName("Car 2");
             }});
 
-            //Pen product group
             add(new Product(3) {{
                 setCount(3000);
                 setPrice(1);
-                setProductType(penProductType);
+                setProductType(productTypeRepository.getRandom());
                 setName("Car 1");
             }});
 
             add(new Product(4) {{
                 setCount(5);
                 setPrice(1.2);
-                setProductType(penProductType);
+                setProductType(productTypeRepository.getRandom());
                 setName("Car 2");
             }});
         }};

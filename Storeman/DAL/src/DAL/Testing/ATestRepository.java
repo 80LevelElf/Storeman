@@ -5,17 +5,24 @@ import DAL.Interfaces.IReadRepository;
 import DAL.Interfaces.IWriteRepository;
 
 import java.util.ArrayList;
+import java.util.Random;
 
 /**
  * Created by Rustam Salakhutdinov on 17.04.2016.
  */
 public class ATestRepository<T extends IStorable> implements IWriteRepository<T>, IReadRepository<T> {
+    private Random _random;
+
     protected ArrayList<T> _dataList = null;
 
     public long getNextId()
     {
         return _dataList.get(_dataList.size() - 1).getId() + 1;
     }
+
+{
+    _random = new Random();
+}
 
     @Override
     public ArrayList<T> GetList()
@@ -66,5 +73,10 @@ public class ATestRepository<T extends IStorable> implements IWriteRepository<T>
                 return;
             }
         }
+    }
+
+    public T getRandom()
+    {
+        return _dataList.get(_random.nextInt(_dataList.size()));
     }
 }

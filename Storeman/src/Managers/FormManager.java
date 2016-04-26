@@ -2,7 +2,6 @@ package Managers;
 
 import MainForm.Main;
 import javafx.fxml.FXMLLoader;
-import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.layout.AnchorPane;
@@ -10,20 +9,28 @@ import javafx.stage.Modality;
 import javafx.stage.Stage;
 import javafx.stage.Window;
 
-import java.io.IOException;
-
 /**
  * Created by Rustam Salakhutdinov on 03.04.2016.
  */
 public final class FormManager {
     //Panels
-    public final static void setCurrentProductsPanel(AnchorPane parent) throws IOException {
-        prepareInlinePanel(parent, loadNode("/Components/CurrentProductsPanel/currentProductsPanel.fxml"));
+    public final static void setCurrentProductsPanel(AnchorPane parent) {
+        Parent parentNode = loadNode("/Panels/CurrentProductsPanel/CurrentProductsPanel.fxml");
+        if (parentNode != null)
+            prepareInlinePanel(parent, parentNode);
+    }
+
+    public final static void setStartPanel(AnchorPane parent) {
+        Parent parentNode = loadNode("/Panels/StartPanel/startPanel.fxml");
+        if (parentNode != null)
+            prepareInlinePanel(parent, parentNode);
     }
 
     //Windows
-    public final static void showProductTypeEdit(Window owner) throws IOException {
-        startModalWindow(owner, loadNode("/Forms/ProductTypeEdit/ProductTypeEdit.fxml"));
+    public final static void showProductTypeEdit(Window owner) {
+        Parent parentNode = loadNode("/Forms/ProductTypeEdit/ProductTypeEdit.fxml");
+        if (parentNode != null)
+            startModalWindow(owner, parentNode);
     }
 
     public final static void startModalWindow(Window owner, Parent node)
@@ -37,10 +44,18 @@ public final class FormManager {
         stage.show();
     }
 
-    private final static Parent loadNode(String fxmlFilePath) throws IOException {
+    private final static Parent loadNode(String fxmlFilePath) {
+
         FXMLLoader loader = new FXMLLoader();
         loader.setLocation(Main.class.getResource(fxmlFilePath));
-        return  (Parent) loader.load();
+
+        try {
+            return  (Parent) loader.load();
+        } catch (Exception e) {
+            AlertManager.showError("Can't find form to load!", "Can't find form to load!",
+                    "We can't find this form file: " + fxmlFilePath);
+            return null;
+        }
     }
 
     private final static void prepareInlinePanel(AnchorPane parent, Parent node)
