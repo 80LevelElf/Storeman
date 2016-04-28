@@ -1,6 +1,6 @@
 package Managers;
 
-import MainForm.Main;
+import Forms.MainForm.Main;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
@@ -14,21 +14,27 @@ import javafx.stage.Window;
  */
 public final class FormManager {
     //Panels
-    public final static void setCurrentProductsPanel(AnchorPane parent) {
-        Parent parentNode = loadNode("/Panels/CurrentProductsPanel/CurrentProductsPanel.fxml");
+    public final static void setProductListPanel(AnchorPane parent) {
+        Parent parentNode = loadNode("/Forms/Product/ProductListPanel.fxml");
         if (parentNode != null)
             prepareInlinePanel(parent, parentNode);
     }
 
     public final static void setStartPanel(AnchorPane parent) {
-        Parent parentNode = loadNode("/Panels/StartPanel/startPanel.fxml");
+        Parent parentNode = loadNode("/Forms/StartPanel/startPanel.fxml");
+        if (parentNode != null)
+            prepareInlinePanel(parent, parentNode);
+    }
+
+    public final static void setProductTypeListPanel(AnchorPane parent) {
+        Parent parentNode = loadNode("/Forms/ProductType/ProductTypeListPanel.fxml");
         if (parentNode != null)
             prepareInlinePanel(parent, parentNode);
     }
 
     //Windows
     public final static void showProductTypeEdit(Window owner) {
-        Parent parentNode = loadNode("/Forms/ProductTypeEdit/ProductTypeEdit.fxml");
+        Parent parentNode = loadNode("/Forms/ProductType/ProductTypeEditForm.fxml");
         if (parentNode != null)
             startModalWindow(owner, parentNode);
     }

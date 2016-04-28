@@ -8,11 +8,11 @@
 <?import javafx.scene.input.KeyCodeCombination?>
 <?import javafx.scene.layout.*?>
 
-<TitledPane id="currentProductTitledPanel" animated="false" collapsible="false" expanded="true" pickOnBounds="false" prefHeight="474.0" prefWidth="732.0" style="" text="Products at the store" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="Panels.CurrentProductsPanel.CurrentProductsPanelController">
+<TitledPane id="currentProductTitledPanel" animated="false" collapsible="false" expanded="true" pickOnBounds="false" prefHeight="474.0" prefWidth="732.0" style="" text="Forms.Product at the store" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="Forms.Product.ProductListPanelController">
   <content>
     <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="277.0" prefWidth="425.0">
       <children>
-        <TableView fx:id="taleView" disable="false" focusTraversable="true" pickOnBounds="false" prefHeight="383.0" prefWidth="591.0" tableMenuButtonVisible="false" visible="true" AnchorPane.bottomAnchor="37.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <TableView fx:id="tableView" disable="false" focusTraversable="true" pickOnBounds="false" prefHeight="383.0" prefWidth="591.0" tableMenuButtonVisible="false" visible="true" AnchorPane.bottomAnchor="37.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
           <columns>
             <TableColumn minWidth="120.0" prefWidth="170.0" text="Type" fx:id="typeColumn" />
             <TableColumn editable="true" minWidth="150.0" prefWidth="250.0" text="Name" fx:id="nameColumn" />
@@ -39,6 +39,6 @@
     </AnchorPane>
   </content>
   <stylesheets>
-    <URL value="@../../Styles/Main.css" />
+    <URL value="@../Styles/Main.css" />
   </stylesheets>
 </TitledPane>

@@ -1,4 +1,4 @@
-package Panels.CurrentProductsPanel;
+package Forms.Product;
 
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -14,7 +14,7 @@ import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
 
 
-public class CurrentProductsPanelController {
+public class ProductListPanelController {
 
     @FXML
     private ResourceBundle resources;
@@ -38,19 +38,19 @@ public class CurrentProductsPanelController {
     private TableColumn<Product, String> typeColumn;
 
     @FXML
-    private TableView<Product> taleView;
+    private TableView<Product> tableView;
 
     @FXML
     void initialize() {
-        assert amountColumn != null : "fx:id=\"amountColumn\" was not injected: check your FXML file 'CurrentProductsPanel.fxml'.";
-        assert countColumn != null : "fx:id=\"countColumn\" was not injected: check your FXML file 'CurrentProductsPanel.fxml'.";
-        assert nameColumn != null : "fx:id=\"nameColumn\" was not injected: check your FXML file 'CurrentProductsPanel.fxml'.";
-        assert priceColumn != null : "fx:id=\"priceColumn\" was not injected: check your FXML file 'CurrentProductsPanel.fxml'.";
-        assert typeColumn != null : "fx:id=\"typeColumn\" was not injected: check your FXML file 'CurrentProductsPanel.fxml'.";
-        assert taleView != null : "fx:id=\"taleView\" was not injected: check your FXML file 'CurrentProductsPanel.fxml'.";
+        assert amountColumn != null : "fx:id=\"amountColumn\" was not injected: check your FXML file 'ProductListPanel.fxml'.";
+        assert countColumn != null : "fx:id=\"countColumn\" was not injected: check your FXML file 'ProductListPanel.fxml'.";
+        assert nameColumn != null : "fx:id=\"nameColumn\" was not injected: check your FXML file 'ProductListPanel.fxml'.";
+        assert priceColumn != null : "fx:id=\"priceColumn\" was not injected: check your FXML file 'ProductListPanel.fxml'.";
+        assert typeColumn != null : "fx:id=\"typeColumn\" was not injected: check your FXML file 'ProductListPanel.fxml'.";
+        assert tableView != null : "fx:id=\"tableView\" was not injected: check your FXML file 'ProductListPanel.fxml'.";
 
         TestProductRepository repository = new TestProductRepository();
-        taleView.setItems(FXCollections.observableList(repository.GetList()));
+        tableView.setItems(FXCollections.observableList(repository.GetList()));
 
         amountColumn.setCellValueFactory(new PropertyValueFactory<>("amount"));
         nameColumn.setCellValueFactory(new PropertyValueFactory<>("name"));

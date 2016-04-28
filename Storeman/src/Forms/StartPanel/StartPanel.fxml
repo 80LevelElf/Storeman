@@ -35,6 +35,6 @@
     </StackPane>
   </children>
   <stylesheets>
-    <URL value="@../../Styles/StartPage.css" />
+    <URL value="@../../Forms/Styles/StartPage.css" />
   </stylesheets>
 </AnchorPane>

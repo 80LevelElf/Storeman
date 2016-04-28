@@ -3,14 +3,13 @@
 <?import java.lang.*?>
 <?import java.net.*?>
 <?import javafx.collections.*?>
-<?import javafx.geometry.Insets?>
+<?import javafx.collections.FXCollections?>
 <?import javafx.scene.control.*?>
-<?import javafx.scene.control.Button?>
-<?import javafx.scene.control.Label?>
 <?import javafx.scene.layout.*?>
-<?import javafx.scene.layout.GridPane?>
+<?import java.lang.String?>
+<?import java.net.URL?>
 
-<AnchorPane maxHeight="-1.0" maxWidth="-1.0" minHeight="-1.0" minWidth="-1.0" prefHeight="131.0" prefWidth="351.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2">
+<AnchorPane maxHeight="-1.0" maxWidth="-1.0" minHeight="-1.0" minWidth="-1.0" prefHeight="131.0" prefWidth="351.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Forms.ProductType.ProductTypeEditFormController">
   <children>
     <Label text="Name:" AnchorPane.leftAnchor="25.0" AnchorPane.topAnchor="27.0" />
     <TextField prefWidth="264.0" AnchorPane.leftAnchor="73.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="24.0" />
@@ -28,6 +27,6 @@
     <Button mnemonicParsing="false" prefWidth="56.0" text="Ok" AnchorPane.bottomAnchor="14.0" AnchorPane.rightAnchor="79.0" />
   </children>
   <stylesheets>
-    <URL value="@../../Styles/Main.css" />
+    <URL value="@../Forms/Styles/Main.css" />
   </stylesheets>
 </AnchorPane>

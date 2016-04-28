@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import javafx.collections.FXCollections?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import java.lang.String?>
+<?import java.net.URL?>
+
+<TitledPane fx:id="productTypesTitlesPane" animated="false" collapsible="false" prefHeight="476.0" prefWidth="602.0" stylesheets="@../Styles/Main.css" text="Product types" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Forms.ProductType.ProductTypeListPanelController">
+   <content>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0">
+         <children>
+            <TableView fx:id="tableView" layoutX="18.6" layoutY="19.6" pickOnBounds="false" prefHeight="390.0" prefWidth="581.0" AnchorPane.bottomAnchor="45.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+              <columns>
+                <TableColumn fx:id="nameColumn" prefWidth="75.0" text="Name" />
+                <TableColumn fx:id="measureUnitsColumn" prefWidth="176.99996185302734" text="Measure units" />
+              </columns>
+               <columnResizePolicy>
+                  <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+               </columnResizePolicy>
+            </TableView>
+            <Button fx:id="addButton" layoutX="19.0" layoutY="411.0" mnemonicParsing="false" styleClass="add-icon" text="Add new type" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="0.0" />
+            <Button fx:id="deleteButton" layoutX="266.0" layoutY="410.0" mnemonicParsing="false" styleClass="delete-icon" text="Delete selected" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="195.0" />
+            <Button fx:id="editButton" layoutX="113.0" layoutY="410.0" mnemonicParsing="false" styleClass="edit-icon" text="Edit selected" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="100.0" />
+         </children>
+      </AnchorPane>
+   </content>
+</TitledPane>

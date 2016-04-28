@@ -1,4 +1,4 @@
-package Panels.StartPanel;
+package Forms.StartPanel;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
