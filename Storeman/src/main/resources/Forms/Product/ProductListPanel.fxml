@@ -39,6 +39,6 @@
     </AnchorPane>
   </content>
   <stylesheets>
-    <URL value="@../Styles/Main.css" />
+    <URL value="@../../Styles/Main.css" />
   </stylesheets>
 </TitledPane>

@@ -1,6 +1,5 @@
 package Forms.ProductType;
 
-import DAL.Testing.Products.TestProductRepository;
 import DAL.Testing.Products.TestProductTypeRepository;
 import Model.Entities.ProductType;
 import javafx.collections.FXCollections;
@@ -13,7 +12,6 @@ import javafx.scene.control.cell.PropertyValueFactory;
 
 import java.net.URL;
 import java.util.ResourceBundle;
-import java.util.StringJoiner;
 
 /**
  * Created by Rustam on 28.04.2016.

@@ -1,0 +1,29 @@
+#currentProductTitledPanel .title{
+    -fx-background-color: lightblue;
+}
+
+.titled-pane .title{
+    -fx-font-weight: bold;
+    -fx-alignment: center;
+}
+
+/*Buttons with icons*/
+.button-with-icon{
+    -fx-background-size: 20px;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: 5%;
+    -fx-alignment: top-right;
+}
+
+.add-icon{
+    -fx-background-image: url("../Images/Add.png");
+}
+
+.edit-icon{
+    -fx-background-image: url("../Images/Edit.png");
+}
+
+.delete-icon{
+    -fx-background-image: url("../Images/Remove.png");
+}
+
