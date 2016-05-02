@@ -1,7 +1,6 @@
 package DAL.Testing.Products;
 
 import DAL.Testing.ATestRepository;
-import Model.Entities.Product;
 import Model.Entities.ProductType;
 
 import java.util.ArrayList;

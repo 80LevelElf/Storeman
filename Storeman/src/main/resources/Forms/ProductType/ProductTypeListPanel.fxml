@@ -4,11 +4,11 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<TitledPane fx:id="productTypesTitlesPane" animated="false" collapsible="false" prefHeight="476.0" prefWidth="602.0" stylesheets="@../../Styles/Main.css" text="Product types" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Forms.ProductType.ProductTypeListPanelController">
+<TitledPane id="productTypeListTitledPane" fx:id="productTypesTitlesPane" animated="false" collapsible="false" prefHeight="476.0" prefWidth="602.0" stylesheets="@../../Styles/Main.css" text="Product types" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Forms.ProductType.ProductTypeListPanelController">
    <content>
       <AnchorPane prefHeight="200.0" prefWidth="200.0">
          <children>
-            <TableView fx:id="tableView" layoutX="18.6" layoutY="19.6" pickOnBounds="false" prefHeight="390.0" prefWidth="581.0" AnchorPane.bottomAnchor="45.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <TableView fx:id="tableView" editable="true" layoutX="18.6" layoutY="19.6" pickOnBounds="false" prefHeight="390.0" prefWidth="581.0" AnchorPane.bottomAnchor="45.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
               <columns>
                 <TableColumn fx:id="nameColumn" prefWidth="75.0" text="Name" />
                 <TableColumn fx:id="measureUnitsColumn" prefWidth="176.99996185302734" text="Measure units" />

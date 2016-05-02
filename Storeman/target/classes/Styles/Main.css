@@ -1,5 +1,9 @@
-#currentProductTitledPanel .title{
+#productListTitledPane .title{
     -fx-background-color: lightblue;
+}
+
+#productTypeListTitledPane .title{
+    -fx-background-color: blanchedalmond;
 }
 
 .titled-pane .title{

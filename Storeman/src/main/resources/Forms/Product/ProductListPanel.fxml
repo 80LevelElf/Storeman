@@ -8,17 +8,17 @@
 <?import javafx.scene.input.KeyCodeCombination?>
 <?import javafx.scene.layout.*?>
 
-<TitledPane id="currentProductTitledPanel" animated="false" collapsible="false" expanded="true" pickOnBounds="false" prefHeight="474.0" prefWidth="732.0" style="" text="Forms.Product at the store" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="Forms.Product.ProductListPanelController">
+<TitledPane id="productListTitledPane" animated="false" collapsible="false" expanded="true" pickOnBounds="false" prefHeight="474.0" prefWidth="732.0" style="" text="Products at the store" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Forms.Product.ProductListPanelController">
   <content>
     <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="277.0" prefWidth="425.0">
       <children>
         <TableView fx:id="tableView" disable="false" focusTraversable="true" pickOnBounds="false" prefHeight="383.0" prefWidth="591.0" tableMenuButtonVisible="false" visible="true" AnchorPane.bottomAnchor="37.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
           <columns>
-            <TableColumn minWidth="120.0" prefWidth="170.0" text="Type" fx:id="typeColumn" />
-            <TableColumn editable="true" minWidth="150.0" prefWidth="250.0" text="Name" fx:id="nameColumn" />
-            <TableColumn minWidth="80.0" prefWidth="100.0" text="Price" fx:id="priceColumn" />
-            <TableColumn minWidth="80.0" prefWidth="75.0" text="Count" fx:id="countColumn" />
-            <TableColumn minWidth="80.0" prefWidth="120.0" text="Amount" fx:id="amountColumn" />
+            <TableColumn fx:id="typeColumn" minWidth="120.0" prefWidth="170.0" text="Type" />
+            <TableColumn fx:id="nameColumn" editable="true" minWidth="150.0" prefWidth="250.0" text="Name" />
+            <TableColumn fx:id="priceColumn" minWidth="80.0" prefWidth="100.0" text="Price" />
+            <TableColumn fx:id="countColumn" minWidth="80.0" prefWidth="75.0" text="Count" />
+            <TableColumn fx:id="amountColumn" minWidth="80.0" prefWidth="120.0" text="Amount" />
           </columns>
         </TableView>
         <MenuButton mnemonicParsing="false" text="Actions" AnchorPane.bottomAnchor="4.0" AnchorPane.leftAnchor="0.0">

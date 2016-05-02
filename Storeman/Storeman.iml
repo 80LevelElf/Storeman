@@ -11,8 +11,6 @@
     </content>
     <orderEntry type="jdk" jdkName="1.8" jdkType="JavaSDK" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="module" module-name="DAL" exported="" />
-    <orderEntry type="module" module-name="Core" exported="" />
-    <orderEntry type="module" module-name="Model" exported="" />
+    <orderEntry type="library" name="Maven: org.modelmapper:modelmapper:0.7.5" level="project" />
   </component>
 </module>

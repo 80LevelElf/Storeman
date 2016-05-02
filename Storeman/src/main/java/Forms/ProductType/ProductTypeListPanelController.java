@@ -3,6 +3,7 @@ package Forms.ProductType;
 import DAL.Testing.Products.TestProductTypeRepository;
 import Model.Entities.ProductType;
 import javafx.collections.FXCollections;
+import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.TableColumn;
@@ -58,5 +59,13 @@ public class ProductTypeListPanelController {
 
         measureUnitsColumn.setCellValueFactory(new PropertyValueFactory<>("measureUnits"));
         nameColumn.setCellValueFactory(new PropertyValueFactory<>("name"));
+
+        measureUnitsColumn.setOnEditCommit(new EventHandler<TableColumn.CellEditEvent<ProductType, String>>() {
+            @Override
+            public void handle(TableColumn.CellEditEvent<ProductType, String> event) {
+                event.getTableView().getItems().get(
+                        event.getTablePosition().getRow()).setName(event.getNewValue());
+            }
+        });
     }
 }

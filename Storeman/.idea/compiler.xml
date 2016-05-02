@@ -26,6 +26,7 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="Model" target="1.8" />
       <module name="Storeman" target="1.8" />
     </bytecodeTargetLevel>
   </component>
