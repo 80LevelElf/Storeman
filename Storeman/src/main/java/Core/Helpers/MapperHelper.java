@@ -1,18 +1,18 @@
-package Core;
+package Core.Helpers;
 
 import org.modelmapper.ModelMapper;
 
 /**
  * Created by Rustam on 02.05.2016.
  */
-public final class Mapper {
+public final class MapperHelper {
     private static ModelMapper mapper;
 
     static {
         mapper = new ModelMapper();
     }
 
-    private Mapper()
+    private MapperHelper()
     {
 
     }

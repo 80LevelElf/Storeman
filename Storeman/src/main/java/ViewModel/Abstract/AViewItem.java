@@ -1,6 +1,6 @@
 package ViewModel.Abstract;
 
-import Core.Mapper;
+import Core.Helpers.MapperHelper;
 import Model.Abstract.AStorable;
 
 /**
@@ -16,12 +16,12 @@ public class AViewItem<T> extends AStorable {
 
     public T getSourceObject()
     {
-        Mapper.map(this, sourceObject);
+        MapperHelper.map(this, sourceObject);
         return sourceObject;
     }
 
     protected void map(T sourceObject)
     {
-        Mapper.map(sourceObject, this);
+        MapperHelper.map(sourceObject, this);
     }
 }

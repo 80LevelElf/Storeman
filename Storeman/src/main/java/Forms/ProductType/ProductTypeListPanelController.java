@@ -1,15 +1,12 @@
 package Forms.ProductType;
 
+import Core.Helpers.ViewModelHelper;
 import DAL.Testing.Products.TestProductTypeRepository;
-import Model.Entities.ProductType;
-import javafx.collections.FXCollections;
-import javafx.event.EventHandler;
+import ViewModel.ProductTypeViewItem;
 import javafx.fxml.FXML;
-import javafx.scene.control.Button;
-import javafx.scene.control.TableColumn;
-import javafx.scene.control.TableView;
-import javafx.scene.control.TitledPane;
+import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.control.cell.TextFieldTableCell;
 
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -37,13 +34,13 @@ public class ProductTypeListPanelController {
     private Button addButton;
 
     @FXML
-    private TableColumn<ProductType, String> measureUnitsColumn;
+    private TableColumn<ProductTypeViewItem, String> measureUnitsColumn;
 
     @FXML
-    private TableColumn<ProductType, String> nameColumn;
+    private TableColumn<ProductTypeViewItem, String> nameColumn;
 
     @FXML
-    private TableView<ProductType> tableView;
+    private TableView<ProductTypeViewItem> tableView;
 
     @FXML
     void initialize() {
@@ -54,18 +51,21 @@ public class ProductTypeListPanelController {
         assert addButton != null : "fx:id=\"addButton\" was not injected: check your FXML file 'ProductTypeListPanel.fxml'.";
         assert measureUnitsColumn != null : "fx:id=\"measureUnitsColumn\" was not injected: check your FXML file 'ProductTypeListPanel.fxml'.";
 
-        TestProductTypeRepository repository = new TestProductTypeRepository();
-        tableView.setItems(FXCollections.observableList(repository.GetList()));
+        tableView.getSelectionModel().setSelectionMode(SelectionMode.MULTIPLE);
 
         measureUnitsColumn.setCellValueFactory(new PropertyValueFactory<>("measureUnits"));
-        nameColumn.setCellValueFactory(new PropertyValueFactory<>("name"));
+        measureUnitsColumn.setCellFactory(TextFieldTableCell.forTableColumn());
+        measureUnitsColumn.setOnEditCommit(t -> t.getTableView().getItems().get(
+                        t.getTablePosition().getRow()).setMeasureUnits(t.getNewValue())
+        );
 
-        measureUnitsColumn.setOnEditCommit(new EventHandler<TableColumn.CellEditEvent<ProductType, String>>() {
-            @Override
-            public void handle(TableColumn.CellEditEvent<ProductType, String> event) {
-                event.getTableView().getItems().get(
-                        event.getTablePosition().getRow()).setName(event.getNewValue());
-            }
-        });
+        nameColumn.setCellValueFactory(new PropertyValueFactory<>("name"));
+        nameColumn.setCellFactory(TextFieldTableCell.forTableColumn());
+        nameColumn.setOnEditCommit(t -> t.getTableView().getItems().get(
+                t.getTablePosition().getRow()).setName(t.getNewValue())
+        );
+
+        TestProductTypeRepository repository = new TestProductTypeRepository();
+        tableView.setItems(ViewModelHelper.getProductTypeViewList(repository.GetList()));
     }
 }
